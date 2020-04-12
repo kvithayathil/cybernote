@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../gradle_scripts/dependencies.gradle'
 
 android {
     compileSdkVersion 29
@@ -17,20 +20,48 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation kotlinDependencies.kotlinStdLibJdk8
+    implementation kotlinDependencies.coroutinesCore
+    implementation kotlinDependencies.coroutinesAndroid
+
+
+    implementation androidDependencies.androidAppCompat
+    implementation androidDependencies.androidCore
+    implementation androidDependencies.fragmentKtx
+    implementation androidDependencies.liveData
+    implementation androidDependencies.viewModel
+    implementation androidDependencies.lifeCycleKtx
+    implementation androidDependencies.navigationFragmentKtx
+    implementation androidDependencies.navigationUiKtx
+    implementation androidDependencies.roomRuntime
+    kapt androidDependencies.roomCompiler
+    implementation androidDependencies.preferenceKtx
+    implementation androidDependencies.recyclerView
+    implementation androidDependencies.materialComponents
+    implementation androidDependencies.constraintLayout
+    implementation frameworkDependencies.dagger
+    kapt frameworkDependencies.daggerCompiler
+
+    testImplementation testDependencies.junit4
+    androidTestImplementation testDependencies.androidJUnit
+    androidTestImplementation testDependencies.androidEspresso
+    androidTestImplementation testDependencies.androidRoom
 }

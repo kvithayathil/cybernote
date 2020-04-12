@@ -1,0 +1,63 @@
+ext {
+
+
+    //Kotlin
+    kotlinVersion = "1.3.71"
+    coroutinesVersion = "1.3.5"
+    kotlinDependencies = [
+            kotlinStdLibJdk8 : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}",
+            coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+    ]
+
+    // Android
+    appCompatVersion = "1.1.0"
+    lifecycleVersion = "2.2.0"
+    androidCoreVersion = "1.2.0"
+    androidCollectionKtxVersion = "1.1.0"
+    androidFragmentKtxVersion = "1.2.4"
+    androidNavigationVersion = "2.2.1"
+    androidRoomVersion = "2.2.5"
+    androidPreferenceVersion = "1.1.0"
+    androidRecyclerViewVersion = "1.1.0"
+    materialComponentsVersion = "1.0.0"
+    androidConstraintLayout = "1.1.3"
+    androidDependencies = [
+            androidAppCompat     : "androidx.appcompat:appcompat:${appCompatVersion}",
+            liveData             : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
+            viewModel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}",
+            lifeCycleKtx         : "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycleVersion}",
+            androidCore          : "androidx.core:core-ktx:${androidCoreVersion}",
+            fragmentKtx          : "androidx.fragment:fragment-ktx:${androidFragmentKtxVersion}",
+            collectionKtx        : "androidx.collection:collection-ktx:${androidCollectionKtxVersion}",
+            navigationFragmentKtx: "androidx.navigation:navigation-fragment-ktx:${androidNavigationVersion}",
+            navigationUiKtx      : "androidx.navigation:navigation-ui-ktx:${androidNavigationVersion}",
+            roomRuntime          : "androidx.room:room-runtime:${androidRoomVersion}",
+            roomCompiler         : "androidx.room:room-compiler:${androidRoomVersion}",
+            preferenceKtx        : "androidx.preference:preference-ktx:${androidPreferenceVersion}",
+            recyclerView         : "androidx.recyclerview:recyclerview:${androidRecyclerViewVersion}",
+            materialComponents   : "com.google.android.material:material:${materialComponentsVersion}",
+            constraintLayout     : "androidx.constraintlayout:constraintlayout:${androidConstraintLayout}"
+
+    ]
+
+    //Architecture & Frameworks
+    daggerVersion = "2.27"
+    frameworkDependencies = [
+            dagger        : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler: "com.google.dagger:dagger-compiler:${daggerVersion}"
+    ]
+
+
+    //Testing
+    junit4Version = "4.12"
+    androidJUnitVersion = "1.1.1"
+    androidEspressoVersion = "3.2.0"
+    testDependencies = [
+            junit4           : "junit:junit:${junit4Version}",
+            androidJUnit     : "androidx.test.ext:junit:${androidJUnitVersion}",
+            androidEspresso  : "androidx.test.espresso:espresso-core:${androidEspressoVersion}",
+            androidNavigation: "androidx.navigation:navigation-testing:${androidNavigationVersion}",
+            androidRoom      : "androidx.room:room-testing:${androidRoomVersion}"
+    ]
+}
