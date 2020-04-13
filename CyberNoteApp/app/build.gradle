@@ -34,6 +34,10 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -52,6 +56,9 @@ dependencies {
     implementation androidDependencies.navigationFragmentKtx
     implementation androidDependencies.navigationUiKtx
     implementation androidDependencies.roomRuntime
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt androidDependencies.roomCompiler
     implementation androidDependencies.preferenceKtx
     implementation androidDependencies.recyclerView

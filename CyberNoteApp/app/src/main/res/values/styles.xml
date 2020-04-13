@@ -1,11 +1,21 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+
+    <style name="NoteList"/>
+    <style name="NoteList.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/note_list_title</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="NoteList.Body" parent="TextAppearance.MaterialComponents.Body1"/>
+    <style name="NoteList.Timestamp" parent="TextAppearance.MaterialComponents.Caption"/>
 
 </resources>
