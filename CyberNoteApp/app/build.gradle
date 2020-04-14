@@ -17,6 +17,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
     }
 
     buildTypes {
@@ -64,6 +71,7 @@ dependencies {
     implementation androidDependencies.recyclerView
     implementation androidDependencies.materialComponents
     implementation androidDependencies.constraintLayout
+    implementation thirdPartyDependencies.threeTenAbp
     implementation frameworkDependencies.dagger
     kapt frameworkDependencies.daggerCompiler
 

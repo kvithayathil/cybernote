@@ -48,6 +48,11 @@ ext {
             daggerCompiler: "com.google.dagger:dagger-compiler:${daggerVersion}"
     ]
 
+    //Third party libraries
+    threeTenAbpVersion = "1.2.3"
+    thirdPartyDependencies = [
+            threeTenAbp: "com.jakewharton.threetenabp:threetenabp:${threeTenAbpVersion}"
+    ]
 
     //Testing
     junit4Version = "4.12"
