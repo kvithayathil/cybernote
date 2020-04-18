@@ -74,6 +74,7 @@ dependencies {
     implementation thirdPartyDependencies.threeTenAbp
     implementation frameworkDependencies.dagger
     kapt frameworkDependencies.daggerCompiler
+    implementation thirdPartyDependencies.timber
 
     testImplementation testDependencies.junit4
     androidTestImplementation testDependencies.androidJUnit

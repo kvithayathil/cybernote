@@ -2,7 +2,7 @@ ext {
 
 
     //Kotlin
-    kotlinVersion = "1.3.71"
+    kotlinVersion = "1.3.72"
     coroutinesVersion = "1.3.5"
     kotlinDependencies = [
             kotlinStdLibJdk8 : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}",
@@ -50,8 +50,10 @@ ext {
 
     //Third party libraries
     threeTenAbpVersion = "1.2.3"
+    timberLoggingVersion = "4.7.1"
     thirdPartyDependencies = [
-            threeTenAbp: "com.jakewharton.threetenabp:threetenabp:${threeTenAbpVersion}"
+            threeTenAbp: "com.jakewharton.threetenabp:threetenabp:${threeTenAbpVersion}",
+            timber     : "com.jakewharton.timber:timber:${timberLoggingVersion}"
     ]
 
     //Testing
